@@ -1,17 +1,81 @@
 <MainMenu>:
     BoxLayout:
-        orientation: 'vertical'
-        spacing: 20
-        padding: 10
+        orientation: 'horizontal'
 
-        canvas.before:
-            color:
-                rgba: 25/255, 86/255, 16/255, 1 #Widget background
-            Rectangle:
-                pos: self.pos
-                size: self.size
+        # Left navigation panel
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.2
+            padding: 10
+            spacing: 15
+            canvas.before:
+                Color:
+                    rgba: 21/255, 75/255, 14/255, 1  # #154B0E
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
 
-        Label:
-            text: root.name.capitalize() + " Page"
-            font_size: 28
-            color: 1, 1, 1, 1
+            Label:
+                text: "FocusFunds"
+                font_size: '20sp'
+                color: 1, 1, 1, 1
+
+            Button:
+                text: "Dashboard"
+                background_normal: ''
+                background_color: 0, 0, 0, 0
+                color: 1, 1, 1, 1
+
+            Button:
+                text: "Accounts"
+                background_normal: ''
+                background_color: 0, 0, 0, 0
+                color: 1, 1, 1, 1
+
+            Button:
+                text: "Transactions"
+                background_normal: ''
+                background_color: 0, 0, 0, 0
+                color: 1, 1, 1, 1
+
+        # Right side content area
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 20
+            spacing: 20
+
+            Label:
+                text: "Dashboard"
+                font_size: '28sp'  # fixed typo: "fount_size"
+                size_hint_y: None
+                height: self.texture_size[1]
+                color: 1, 1, 1, 1
+
+            BoxLayout:
+                size_hint_y: 0.3
+                spacing: 15
+                canvas.before:
+                    Color:
+                        rgba: 25/255, 86/255, 16/255, 1  # #195610
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: "[Placeholder] Budget Summary"
+                    color: 1, 1, 1, 1
+                    markup: True
+
+            BoxLayout:
+                size_hint_y: 0.3
+                spacing: 15
+                canvas.before:
+                    Color:
+                        rgba: 25/255, 86/255, 16/255, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: "[Placeholder] Transactions Overview"
+                    color: 1, 1, 1, 1
