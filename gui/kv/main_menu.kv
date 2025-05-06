@@ -1,0 +1,17 @@
+<MainMenu>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 10
+
+        canvas.before:
+            color:
+                rgba: 25/255, 86/255, 16/255, 1 #Widget background
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: root.name.capitalize() + " Page"
+            font_size: 28
+            color: 1, 1, 1, 1
